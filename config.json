@@ -1,0 +1,14 @@
+{
+  "mode": 1, 
+  "useProxy": true,
+  "maxThreads": 10,
+  "enableRef": true,
+  "totalWalletsToGen": 100,
+  "delay": {
+    "taskMin": 3000,
+    "taskMax": 7000,
+    "nextAccMin": 30000,
+    "nextAccMax": 60000,
+    "spawnThread": 5000
+  }
+}

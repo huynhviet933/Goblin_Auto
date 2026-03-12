@@ -1,0 +1,18 @@
+Giải thích ý nghĩa:
+"mode": 1: Chế độ chạy của Tool.
+Số 1: Chế độ tạo ví mới hoàn toàn. Tool sẽ tạo ví, lưu vào Excel, tự động Bind Ref và Check-in luôn.
+Số 2: Chế độ chạy lại ví cũ. Tool sẽ đọc danh sách ví từ file đã có để tiếp tục Check-in hàng ngày.
+"useProxy": true: Bật/Tắt Proxy.
+true: Tool sẽ đọc file proxy.txt và đổi IP cho từng ví (An toàn, tránh bị khóa acc).
+false: Dùng mạng nhà (Chỉ nên dùng nếu chạy ít ví).
+"maxThreads": 5: Số luồng chạy cùng lúc.
+Ví dụ bạn để là 5, tool sẽ mở 5 "cửa sổ" chạy song song. Tăng số này nếu bạn muốn chạy xong nhanh hơn, nhưng cần máy khỏe và nhiều Proxy.
+"enableRef": true: Bật/Tắt liên kết mã mời.
+true: Tool sẽ tự lấy mã trong ref.txt để nhập vào khi đăng ký.
+false: Bỏ qua bước nhập mã mời.
+"totalWalletsToGen": 10: Số lượng ví muốn tạo (Chỉ có tác dụng khi để mode: 1).
+Ví dụ điền 100, tool sẽ tự tạo 100 ví Aptos mới và thực hiện nhiệm vụ.
+"delay": Các thông số về thời gian chờ (đơn vị là miligiây, 1000ms = 1 giây).
+taskMin / taskMax (3000 - 7000): Thời gian chờ giữa các bước trong một ví (ví dụ: Login xong chờ 3-7 giây rồi mới Check-in). Giúp giả lập thao tác như người thật.
+nextAccMin / nextAccMax (30000 - 60000): Thời gian nghỉ sau khi chạy xong 1 ví. Tool sẽ nghỉ 30-60 giây rồi mới chuyển sang ví tiếp theo.
+spawnThread (5000): Thời gian chờ khi mở một luồng mới. Ví dụ luồng 1 chạy được 5 giây thì luồng 2 mới bắt đầu mở, tránh việc hàng loạt ví cùng gửi yêu cầu lên server một lúc.
